@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <SceneKit/SceneKit.h>
+#import "Constant.h"
 
 @class ModelTransView;
 @class CModelView;
@@ -23,7 +24,7 @@
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomConstraint;
 
-- (void)changeCameraDirection:(NSInteger)direction;
+- (void)changeCameraDirection:(CMDirection)direction;
 - (void)refreshSize:(SCNVector3)vector;
 
 @end

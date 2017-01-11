@@ -8,19 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <SceneKit/SceneKit.h>
-
-typedef NS_ENUM(NSInteger, Direction) {
-    kDirectionFront,
-    kDirectionSide,
-    kDirectionTop
-};
+#import "Constant.h"
 
 @class GameViewController;
 
 //*****************History************************
 @interface History : NSObject
 
-@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, assign) CMSlider type;
 
 @property (nonatomic, assign) SCNVector3 vector;
 
@@ -39,7 +34,7 @@ typedef NS_ENUM(NSInteger, Direction) {
 
 - (void)addHistory:(History *)history;
 
-- (void)setTransType:(NSInteger)type;
+- (void)setTransType:(CMSlider)type;
 
 - (void)setContentOffset:(CGPoint)contentOffset;
 

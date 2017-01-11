@@ -243,7 +243,7 @@
            mat4.m41, mat4.m42, mat4.m43, mat4.m44);
 }
 
-- (void)changeCameraDirection:(NSInteger)direction
+- (void)changeCameraDirection:(CMDirection)direction
 {
     switch (direction) {
         case kDirectionFront:

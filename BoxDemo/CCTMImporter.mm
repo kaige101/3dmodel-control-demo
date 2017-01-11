@@ -145,12 +145,12 @@ SCNNode* test()
 
 @implementation CCTMImporter
 
-+(void)importFile:(NSString *)path complete:(void (^)(SCNNode *, NSData *))complete
++ (void)importFile:(NSString *)path complete:(void (^)(SCNNode *, NSData *))complete
 {
     [[[CCTMImporter alloc] init] importFile:path complete:complete];
 }
 
--(void)importFile:(NSString *)path complete:(void (^)(SCNNode *, NSData *))complete
+- (void)importFile:(NSString *)path complete:(void (^)(SCNNode *, NSData *))complete
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         Mesh mesh;
@@ -201,7 +201,7 @@ SCNNode* test()
     });
 }
 
--(void)convertToData1:(Mesh)mesh vertices:(NSMutableData*)theVertices normals:(NSMutableData*)theNormals elements:(NSMutableData*)theElements
+- (void)convertToData1:(Mesh)mesh vertices:(NSMutableData*)theVertices normals:(NSMutableData*)theNormals elements:(NSMutableData*)theElements
 {
     Vector3 vMin, vMax, vCenter;
     mesh.BoundingBox(vMin, vMax);
@@ -235,7 +235,8 @@ SCNNode* test()
         [theElements appendBytes:&theIndices[0] length:sizeof(theIndices)];
     }
 }
--(void)convertToData:(Mesh)mesh vertices:(NSMutableData*)theVertices normals:(NSMutableData*)theNormals elements:(NSMutableData*)theElements
+
+- (void)convertToData:(Mesh)mesh vertices:(NSMutableData*)theVertices normals:(NSMutableData*)theNormals elements:(NSMutableData*)theElements
 {
     Vector3 vMin, vMax, vCenter;
     mesh.BoundingBox(vMin, vMax);
@@ -272,7 +273,7 @@ SCNNode* test()
     // printf("%f,\t %f,\t %f \n", theNormal.x, theNormal.y, theNormal.z);
 }
 
-+(Vector3)calNormal:(Vector3)v0 v1:(Vector3)v1 v2:(Vector3)v2
++ (Vector3)calNormal:(Vector3)v0 v1:(Vector3)v1 v2:(Vector3)v2
 {
     Vector3 va, vb, vab;
     va = Vector3(v1.x-v0.x, v1.y-v0.y, v1.z-v0.z);

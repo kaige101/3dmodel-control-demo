@@ -98,6 +98,7 @@
 		6912CEF31C1FB1B4005D3678 /* img_blue_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_blue_select@2x.png"; sourceTree = "<group>"; };
 		6917F1261C45F5BA005D7E1E /* CModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CModelView.h; sourceTree = "<group>"; };
 		6917F1271C45F5BA005D7E1E /* CModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CModelView.m; sourceTree = "<group>"; };
+		6919E4FB1E25F1E300629228 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		691EEDCA1C30D8FE00E8F322 /* ModelTransView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTransView.h; sourceTree = "<group>"; };
 		691EEDCB1C30D8FE00E8F322 /* ModelTransView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTransView.m; sourceTree = "<group>"; };
 		6978B5481C1EA3D600ED673F /* BoxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +248,7 @@
 				691EEDCB1C30D8FE00E8F322 /* ModelTransView.m */,
 				69A7D8331C20F97B008E1C59 /* CMSliderView.h */,
 				69A7D8341C20F97B008E1C59 /* CMSliderView.m */,
+				6919E4FB1E25F1E300629228 /* Constant.h */,
 				69A7D8311C20F1AE008E1C59 /* CMSliderView.xib */,
 				6978B5561C1EA3D600ED673F /* Main.storyboard */,
 				699C4D0F1C3366F300CDAFF4 /* model */,

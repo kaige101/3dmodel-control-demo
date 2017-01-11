@@ -61,7 +61,7 @@
     self.sliderZ.value = z;
 }
 
-- (void)setType:(NSInteger)type
+- (void)setType:(CMSlider)type
 {
     _type = type;
     NSArray *array = @[self.sliderX, self.sliderY, self.sliderZ];

@@ -20,7 +20,7 @@
 
 @implementation CModelView
 
--(void)initModel
+- (void)initModel
 {
     /*SCNScene *scene = [SCNScene scene];
     

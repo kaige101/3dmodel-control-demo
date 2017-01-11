@@ -8,19 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <SceneKit/SceneKit.h>
+#import "Constant.h"
 
 @protocol CMSliderDelegate <NSObject>
 
--(void)sliderViewValueChange:(NSInteger)type vector:(SCNVector3)vector;
--(void)sliderViewTouchUpInside:(NSInteger)type vector:(SCNVector3)vector;
+-(void)sliderViewValueChange:(CMSlider)type vector:(SCNVector3)vector;
+-(void)sliderViewTouchUpInside:(CMSlider)type vector:(SCNVector3)vector;
 
 @end
-
-enum {
-    kSliderTranslation,
-    kSliderRotate,
-    kSliderScale
-};
 
 @class ModelTransView;
 
@@ -32,7 +27,7 @@ enum {
 
 @property (nonatomic, weak) ModelTransView *transView;
 
-@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, assign) CMSlider type;
 
 @property (nonatomic, assign) CGFloat minValue;
 @property (nonatomic, assign) CGFloat maxValue;

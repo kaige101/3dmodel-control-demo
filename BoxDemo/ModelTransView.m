@@ -96,7 +96,7 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, CGFloat aScale) {
     }
 }
 
-- (void)setTransType:(NSInteger)type
+- (void)setTransType:(CMSlider)type
 {
     if (type == kSliderScale) {
         self.bLockValue = YES;
@@ -164,7 +164,7 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, CGFloat aScale) {
 }
 
 #pragma mark - SliderView Delegate
-- (void)sliderViewValueChange:(NSInteger)type vector:(SCNVector3)vector
+- (void)sliderViewValueChange:(CMSlider)type vector:(SCNVector3)vector
 {
     switch (type) {
         case kSliderTranslation:
@@ -203,7 +203,7 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, CGFloat aScale) {
     self.ctrl.theModelNode.transform = SCNMatrix4Mult(mat4, mat4auto);;
 }
 
-- (void)sliderViewTouchUpInside:(NSInteger)type vector:(SCNVector3)vector
+- (void)sliderViewTouchUpInside:(CMSlider)type vector:(SCNVector3)vector
 {
     if (type == kSliderRotate)
         [self recalcModelSize:SCNVector3Mult(vector, M_PI/180.0)];
