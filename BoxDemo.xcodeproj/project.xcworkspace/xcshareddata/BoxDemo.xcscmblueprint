@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6978a84d-0036-4c35-bbb2-2143946da219++5168",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "6978a84d-0036-4c35-bbb2-2143946da219++5168" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6978a84d-0036-4c35-bbb2-2143946da219++5168" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B17C4E5D-E51A-4E8A-A77B-27B77332FD52",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6978a84d-0036-4c35-bbb2-2143946da219++5168" : "BoxDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BoxDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BoxDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/trac.mohou.com:9005\/svn\/d3print",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6978a84d-0036-4c35-bbb2-2143946da219++5168"
+    }
+  ]
+}

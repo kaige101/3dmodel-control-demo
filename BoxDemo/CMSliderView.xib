@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CMSliderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyc-9J-roy">
+                    <rect key="frame" x="10" y="10" width="30" height="30"/>
+                    <state key="normal" title="X-"/>
+                    <connections>
+                        <action selector="doSymbolClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="VsB-bn-gdu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7p-hG-aRt">
+                    <rect key="frame" x="280" y="10" width="30" height="30"/>
+                    <state key="normal" title="X+"/>
+                    <connections>
+                        <action selector="doSymbolClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ysu-m5-4kg"/>
+                    </connections>
+                </button>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y37-zd-bz4">
+                    <rect key="frame" x="48" y="10" width="224" height="31"/>
+                    <connections>
+                        <action selector="doTouchDown:" destination="iN0-l3-epB" eventType="touchDown" id="KnS-ZW-Ziy"/>
+                        <action selector="doTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="j1A-JE-Goo"/>
+                        <action selector="valueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="oON-61-1Ay"/>
+                    </connections>
+                </slider>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zI-z4-BCR">
+                    <rect key="frame" x="10" y="50" width="30" height="30"/>
+                    <state key="normal" title="Y-"/>
+                    <connections>
+                        <action selector="doSymbolClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="N18-GH-z4X"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Buj-I8-lZt">
+                    <rect key="frame" x="280" y="50" width="30" height="30"/>
+                    <state key="normal" title="Y+"/>
+                    <connections>
+                        <action selector="doSymbolClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="TAQ-cc-kUv"/>
+                    </connections>
+                </button>
+                <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vHo-mo-fHr">
+                    <rect key="frame" x="48" y="50" width="224" height="31"/>
+                    <connections>
+                        <action selector="doTouchDown:" destination="iN0-l3-epB" eventType="touchDown" id="h45-cX-All"/>
+                        <action selector="doTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="gCs-qg-sCl"/>
+                        <action selector="valueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="za5-Mn-8xr"/>
+                    </connections>
+                </slider>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acm-sW-itd">
+                    <rect key="frame" x="10" y="90" width="30" height="30"/>
+                    <state key="normal" title="Z-"/>
+                    <connections>
+                        <action selector="doSymbolClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="wRd-XY-3yP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPx-FH-w4S">
+                    <rect key="frame" x="280" y="90" width="30" height="30"/>
+                    <state key="normal" title="Z+"/>
+                    <connections>
+                        <action selector="doSymbolClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="oex-ob-mjY"/>
+                    </connections>
+                </button>
+                <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="frH-Fw-pca">
+                    <rect key="frame" x="48" y="90" width="224" height="31"/>
+                    <connections>
+                        <action selector="doTouchDown:" destination="iN0-l3-epB" eventType="touchDown" id="Ymw-1X-wTq"/>
+                        <action selector="doTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="OdA-1W-ff7"/>
+                        <action selector="valueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="qhh-px-xgb"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vHo-mo-fHr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="13H-c2-csq"/>
+                <constraint firstAttribute="trailing" secondItem="Buj-I8-lZt" secondAttribute="trailing" constant="10" id="1nQ-Xr-tfj"/>
+                <constraint firstAttribute="trailing" secondItem="wPx-FH-w4S" secondAttribute="trailing" constant="10" id="260-bb-Hq3"/>
+                <constraint firstItem="dyc-9J-roy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="6Re-hW-WyV"/>
+                <constraint firstItem="3zI-z4-BCR" firstAttribute="top" secondItem="vHo-mo-fHr" secondAttribute="top" id="70u-Fj-VtP"/>
+                <constraint firstItem="dyc-9J-roy" firstAttribute="top" secondItem="Y37-zd-bz4" secondAttribute="top" id="AFR-qd-rVr"/>
+                <constraint firstItem="vHo-mo-fHr" firstAttribute="top" secondItem="Y37-zd-bz4" secondAttribute="bottom" constant="10" id="G9w-2I-hc9"/>
+                <constraint firstItem="L7p-hG-aRt" firstAttribute="top" secondItem="Y37-zd-bz4" secondAttribute="top" id="KwK-Ch-Eck"/>
+                <constraint firstAttribute="trailing" secondItem="L7p-hG-aRt" secondAttribute="trailing" constant="10" id="M2n-nb-iTf"/>
+                <constraint firstItem="Buj-I8-lZt" firstAttribute="top" secondItem="vHo-mo-fHr" secondAttribute="top" id="Pio-9A-z8a"/>
+                <constraint firstItem="3zI-z4-BCR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Yqx-St-Bpc"/>
+                <constraint firstItem="wPx-FH-w4S" firstAttribute="top" secondItem="frH-Fw-pca" secondAttribute="top" id="ZFL-K5-2dQ"/>
+                <constraint firstItem="frH-Fw-pca" firstAttribute="leading" secondItem="acm-sW-itd" secondAttribute="trailing" constant="10" id="dvb-SG-a6j"/>
+                <constraint firstItem="frH-Fw-pca" firstAttribute="top" secondItem="vHo-mo-fHr" secondAttribute="bottom" constant="10" id="dw4-h0-WCs"/>
+                <constraint firstItem="L7p-hG-aRt" firstAttribute="leading" secondItem="Y37-zd-bz4" secondAttribute="trailing" constant="10" id="fU3-sD-99c"/>
+                <constraint firstItem="Buj-I8-lZt" firstAttribute="leading" secondItem="vHo-mo-fHr" secondAttribute="trailing" constant="10" id="g3e-wL-vAB"/>
+                <constraint firstItem="Y37-zd-bz4" firstAttribute="leading" secondItem="dyc-9J-roy" secondAttribute="trailing" constant="10" id="gnj-8S-iK2"/>
+                <constraint firstItem="Y37-zd-bz4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="hS3-9u-Kjo"/>
+                <constraint firstItem="vHo-mo-fHr" firstAttribute="leading" secondItem="3zI-z4-BCR" secondAttribute="trailing" constant="10" id="iNm-QH-GVw"/>
+                <constraint firstItem="wPx-FH-w4S" firstAttribute="leading" secondItem="frH-Fw-pca" secondAttribute="trailing" constant="10" id="o9z-ci-y5Z"/>
+                <constraint firstItem="acm-sW-itd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="oq1-HB-Z8R"/>
+                <constraint firstItem="frH-Fw-pca" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vhz-CI-29V"/>
+                <constraint firstItem="Y37-zd-bz4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="x1D-E5-Cuh"/>
+                <constraint firstItem="acm-sW-itd" firstAttribute="top" secondItem="frH-Fw-pca" secondAttribute="top" id="xJY-b1-rOs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="sliderX" destination="Y37-zd-bz4" id="hrB-So-Ik4"/>
+                <outlet property="sliderY" destination="vHo-mo-fHr" id="yrp-or-dOf"/>
+                <outlet property="sliderZ" destination="frH-Fw-pca" id="BUc-Uz-nP7"/>
+            </connections>
+            <point key="canvasLocation" x="240" y="129"/>
+        </view>
+    </objects>
+</document>
