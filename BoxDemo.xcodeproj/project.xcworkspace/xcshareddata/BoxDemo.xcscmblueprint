@@ -1,21 +1,28 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6978a84d-0036-4c35-bbb2-2143946da219++5168",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "436E10068FB97C703E8526BEF7B757D49143D7FA",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
     "6978a84d-0036-4c35-bbb2-2143946da219++5168" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "6978a84d-0036-4c35-bbb2-2143946da219++5168" : 9223372036854775807
+    "6978a84d-0036-4c35-bbb2-2143946da219++5168" : 9223372036854775807,
+    "436E10068FB97C703E8526BEF7B757D49143D7FA" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B17C4E5D-E51A-4E8A-A77B-27B77332FD52",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "6978a84d-0036-4c35-bbb2-2143946da219++5168" : "BoxDemo\/"
+    "6978a84d-0036-4c35-bbb2-2143946da219++5168" : "BoxDemo\/",
+    "436E10068FB97C703E8526BEF7B757D49143D7FA" : "3dmodel-control-demo\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "BoxDemo",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BoxDemo.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaige101\/3dmodel-control-demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "436E10068FB97C703E8526BEF7B757D49143D7FA"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/trac.mohou.com:9005\/svn\/d3print",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",

@@ -23,7 +23,7 @@
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomConstraint;
 
--(void)changeCameraDirection:(int)direction;
--(void)refreshSize:(SCNVector3)vector;
+- (void)changeCameraDirection:(NSInteger)direction;
+- (void)refreshSize:(SCNVector3)vector;
 
 @end

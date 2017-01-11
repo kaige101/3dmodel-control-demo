@@ -31,7 +31,7 @@
     IBOutlet UILabel *labSizeY;
     IBOutlet UILabel *labSizeZ;
     
-    float width, height, length;
+    CGFloat width, height, length;
 }
 
 @property (nonatomic, weak) SCNNode *theCamera;
@@ -112,7 +112,7 @@
     self.scnView.pointOfView.transform = SCNMatrix4Mult(mat4_t, mat4_r);
 }
 
--(void)initCylinder:(SCNScene *)scene
+- (void)initCylinder:(SCNScene *)scene
 {
     // board geometry
     SCNGeometry *boardGeometry = [SCNCylinder cylinderWithRadius:width/2 height:1.0f];
@@ -134,7 +134,7 @@
     [scene.rootNode addChildNode:boxNode];
 }
 
--(void)initCubeBox:(SCNScene *)scene
+- (void)initCubeBox:(SCNScene *)scene
 {
     // board geometry
     SCNBox *boardGeometry = [SCNBox boxWithWidth:width height:height length:1.0f chamferRadius:0];//width = x, height = y, length = z;
@@ -154,7 +154,7 @@
     [scene.rootNode addChildNode:boxNode];
     
     //direction geometry
-    float dirWidth = width/3;
+    CGFloat dirWidth = width/3;
     for (int i = 0; i < 3; i++) {
         SCNBox *box = [SCNBox boxWithWidth:dirWidth height:2 length:2 chamferRadius:0];
         SCNNode *boxNode = [SCNNode nodeWithGeometry:box];
@@ -180,7 +180,7 @@
     }
 }
 
--(void)initModelTransView
+- (void)initModelTransView
 {
     self.modelTrans.ctrl = self;
     [self.modelTrans initData];
@@ -190,7 +190,7 @@
     self.modelTrans.hidden = YES;
 }
 
--(IBAction)doBottomClick:(id)sender
+- (IBAction)doBottomClick:(id)sender
 {
     NSInteger tag = [sender tag];
     
@@ -212,7 +212,7 @@
     [self.modelTrans setContentOffset:CGPointMake(self.view.frame.size.width*tag, 0)];
 }
 
--(IBAction)doFoldClick:(id)sender
+- (IBAction)doFoldClick:(id)sender
 {
     bIsBottomShow = !bIsBottomShow;
     
@@ -224,7 +224,7 @@
     [_theModelNode runAction:[SCNAction scaleBy:1.0 duration:1.0]];
 }
 
--(void)refreshSize:(SCNVector3)vector
+- (void)refreshSize:(SCNVector3)vector
 {
     SCNVector3 v3Min, v3Max;
     [_theModelNode getBoundingBoxMin:&v3Min max:&v3Max];
@@ -234,7 +234,7 @@
     labSizeZ.text = [NSString stringWithFormat:@"SizeZ:%0.2fmm", fabsf(v3Max.z-v3Min.z)*vector.z];
 }
 
--(void)printMatrix4:(SCNMatrix4)mat4
+- (void)printMatrix4:(SCNMatrix4)mat4
 {
     printf("%f, %f, %f, %f \n%f, %f, %f, %f \n%f, %f, %f, %f \n%f, %f, %f, %f\n\n\n",
            mat4.m11, mat4.m12, mat4.m13, mat4.m14,
@@ -243,7 +243,7 @@
            mat4.m41, mat4.m42, mat4.m43, mat4.m44);
 }
 
--(void)changeCameraDirection:(int)direction
+- (void)changeCameraDirection:(NSInteger)direction
 {
     switch (direction) {
         case kDirectionFront:

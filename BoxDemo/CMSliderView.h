@@ -11,8 +11,8 @@
 
 @protocol CMSliderDelegate <NSObject>
 
--(void)sliderViewValueChange:(int)type vector:(SCNVector3)vector;
--(void)sliderViewTouchUpInside:(int)type vector:(SCNVector3)vector;
+-(void)sliderViewValueChange:(NSInteger)type vector:(SCNVector3)vector;
+-(void)sliderViewTouchUpInside:(NSInteger)type vector:(SCNVector3)vector;
 
 @end
 
@@ -32,10 +32,10 @@ enum {
 
 @property (nonatomic, weak) ModelTransView *transView;
 
-@property (nonatomic, assign) int type;
+@property (nonatomic, assign) NSInteger type;
 
-@property (nonatomic, assign) float minValue;
-@property (nonatomic, assign) float maxValue;
+@property (nonatomic, assign) CGFloat minValue;
+@property (nonatomic, assign) CGFloat maxValue;
 
 @property (nonatomic, weak) id<CMSliderDelegate> delegate;
 

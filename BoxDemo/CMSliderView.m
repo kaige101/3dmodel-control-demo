@@ -7,6 +7,7 @@
 //
 
 #import "CMSliderView.h"
+#import <objc/runtime.h>
 
 #import "ModelTransView.h"
 
@@ -19,11 +20,11 @@
 
 @interface CMSliderView()
 {
-    float x;
-    float y;
-    float z;
+    CGFloat x;
+    CGFloat y;
+    CGFloat z;
     
-    float unit;
+    CGFloat unit;
 }
 
 @property (nonatomic, weak) IBOutlet UISlider *sliderX;
@@ -36,13 +37,13 @@
 
 @implementation CMSliderView
 
-+(CMSliderView *)loadView
++ (CMSliderView *)loadView
 {
     CMSliderView *view = [[[NSBundle mainBundle] loadNibNamed:@"CMSliderView" owner:nil options:nil] objectAtIndex:0];
     return view;
 }
 
--(instancetype)init
+- (instancetype)init
 {
     if (self = [super init]) {
         
@@ -50,7 +51,7 @@
     return self;
 }
 
--(void)undoSlider:(SCNVector3)vector
+- (void)undoSlider:(SCNVector3)vector
 {
     x = vector.x;
     y = vector.y;
@@ -60,7 +61,7 @@
     self.sliderZ.value = z;
 }
 
--(void)setType:(int)type
+- (void)setType:(NSInteger)type
 {
     _type = type;
     NSArray *array = @[self.sliderX, self.sliderY, self.sliderZ];
@@ -99,7 +100,7 @@
     z = self.sliderZ.value;
 }
 
--(void)lockValue:(float)value
+- (void)lockValue:(float)value
 {
     if (self.transView.bLockValue) {
         x = y = z = value;
@@ -108,7 +109,7 @@
         self.sliderZ.value = value;
     }
 }
--(IBAction)valueChange:(id)sender
+- (IBAction)valueChange:(id)sender
 {
     UISlider *slider = (UISlider *)sender;
     switch ([sender tag]) {
@@ -131,18 +132,18 @@
     }
 }
 
--(void)calculateHistory
+- (void)calculateHistory
 {
     History *history = [[History alloc] init];
     history.type = self.type;
     history.vector = SCNVector3Make(x, y, z);
     self.curHistory = history;
 }
--(IBAction)doTouchDown:(id)sender
+- (IBAction)doTouchDown:(id)sender
 {
     [self calculateHistory];
 }
--(IBAction)doTouchUpInside:(id)sender
+- (IBAction)doTouchUpInside:(id)sender
 {
     if (self.curHistory) {
         if (_curHistory.vector.x != x || _curHistory.vector.y != y || _curHistory.vector.z != z) {
@@ -174,7 +175,7 @@
     }
 }
 
--(IBAction)doSymbolClick:(id)sender
+- (IBAction)doSymbolClick:(id)sender
 {
     [self calculateHistory];
     

@@ -12,7 +12,7 @@
 
 @interface CModelView()
 {
-    float width, height, depth;
+    CGFloat width, height, depth;
     
 }
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <SceneKit/SceneKit.h>
 
-enum {
+typedef NS_ENUM(NSInteger, Direction) {
     kDirectionFront,
     kDirectionSide,
     kDirectionTop
@@ -20,7 +20,7 @@ enum {
 //*****************History************************
 @interface History : NSObject
 
-@property (nonatomic, assign) int type;
+@property (nonatomic, assign) NSInteger type;
 
 @property (nonatomic, assign) SCNVector3 vector;
 
@@ -35,11 +35,11 @@ enum {
 
 @property (nonatomic, assign) SCNVector3 vTranslation;
 
--(void)initData;
+- (void)initData;
 
--(void)addHistory:(History *)history;
+- (void)addHistory:(History *)history;
 
--(void)setTransType:(int)type;
+- (void)setTransType:(NSInteger)type;
 
 - (void)setContentOffset:(CGPoint)contentOffset;
 

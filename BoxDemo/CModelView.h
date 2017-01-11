@@ -10,6 +10,6 @@
 
 @interface CModelView : NSObject
 
--(void)initModel;
+- (void)initModel;
 
 @end

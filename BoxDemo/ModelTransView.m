@@ -23,7 +23,7 @@ NS_INLINE SCNVector3 SCNVector3Add(SCNVector3 v1, SCNVector3 v2) {
 //NS_INLINE SCNVector3 SCNVector3Minus(SCNVector3 v1, SCNVector3 v2) {
 //    return SCNVector3Make(v1.x-v2.x, v1.y-v2.y, v1.z-v2.z);
 //}
-NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, float aScale) {
+NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, CGFloat aScale) {
     return SCNVector3Make(v.x*aScale, v.y*aScale, v.z*aScale);
 }
 
@@ -63,7 +63,7 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, float aScale) {
 }
 */
 
--(void)initData
+- (void)initData
 {
     mat4t = mat4s = mat4r = mat4auto = self.ctrl.theModelNode.transform;
     [self.ctrl.theModelNode getBoundingBoxMin:&vMin max:&vMax];
@@ -77,7 +77,7 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, float aScale) {
     [self initScrollView];
 }
 
--(void)initScrollView
+- (void)initScrollView
 {
     for (int i = 0; i < 3; i++) {
         CMSliderView *sliderView = [CMSliderView loadView];
@@ -96,7 +96,7 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, float aScale) {
     }
 }
 
--(void)setTransType:(int)type
+- (void)setTransType:(NSInteger)type
 {
     if (type == kSliderScale) {
         self.bLockValue = YES;
@@ -111,19 +111,19 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, float aScale) {
     }
 }
 
--(void)setContentOffset:(CGPoint)contentOffset
+- (void)setContentOffset:(CGPoint)contentOffset
 {
     [self.scrollView setContentOffset:contentOffset animated:YES];
 }
 
--(void)addHistory:(History *)history
+- (void)addHistory:(History *)history
 {
     [self.histories addObject:history];
     
     [self.btnUndo setEnabled:YES];
 }
 
--(IBAction)doTopClick:(id)sender
+- (IBAction)doTopClick:(id)sender
 {
     UIButton *btn = (UIButton *)sender;
     switch (btn.tag) {
@@ -164,7 +164,7 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, float aScale) {
 }
 
 #pragma mark - SliderView Delegate
--(void)sliderViewValueChange:(int)type vector:(SCNVector3)vector
+- (void)sliderViewValueChange:(NSInteger)type vector:(SCNVector3)vector
 {
     switch (type) {
         case kSliderTranslation:
@@ -175,14 +175,14 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, float aScale) {
             break;
         case kSliderRotate:
         {
-            float anglex = vector.x*M_PI/180.0;
+            CGFloat anglex = vector.x*M_PI/180.0;
             
             SCNMatrix4 mat4x = SCNMatrix4MakeRotation(anglex, 1, 0, 0);
             
-            float angley = vector.y*M_PI/180.0;
+            CGFloat angley = vector.y*M_PI/180.0;
             SCNMatrix4 mat4y = SCNMatrix4MakeRotation(angley, 0, 1, 0);
             
-            float anglez = vector.z*M_PI/180.0;
+            CGFloat anglez = vector.z*M_PI/180.0;
             SCNMatrix4 mat4z = SCNMatrix4MakeRotation(anglez, 0, 0, 1);
             
             mat4r = SCNMatrix4Mult(SCNMatrix4Mult(mat4x, mat4y), mat4z);
@@ -203,7 +203,7 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, float aScale) {
     self.ctrl.theModelNode.transform = SCNMatrix4Mult(mat4, mat4auto);;
 }
 
--(void)sliderViewTouchUpInside:(int)type vector:(SCNVector3)vector
+- (void)sliderViewTouchUpInside:(NSInteger)type vector:(SCNVector3)vector
 {
     if (type == kSliderRotate)
         [self recalcModelSize:SCNVector3Mult(vector, M_PI/180.0)];
@@ -215,7 +215,7 @@ NS_INLINE SCNVector3 SCNVector3Mult(SCNVector3 v, float aScale) {
     self.ctrl.theModelNode.transform = SCNMatrix4Mult(mat4, mat4auto);
 }
 
--(void)recalcModelSize:(SCNVector3)angle
+- (void)recalcModelSize:(SCNVector3)angle
 {
     int len = 0;
     size_t size = sizeof(SCNVector3);
